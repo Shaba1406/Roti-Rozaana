@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Documentation</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>API Documentation</h2>
+
+  <!-- API endpoints -->
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">1. GET /getUsers</h5>
+      <p class="card-text">Fetch all users data.</p>
+      <p class="card-text"><strong>Request:</strong> Method: GET, URL: /getUsers</p>
+      <p class="card-text"><strong>Response:</strong> Status Code: 200, Body: { "message": "Users data fetched successfully", "req_data": [array of users] }</p>
+    </div>
+  </div>
+
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">2. POST /signup</h5>
+      <p class="card-text">Register a new user.</p>
+      <p class="card-text"><strong>Request:</strong> Method: POST, URL: /signup</p>
+      <p class="card-text"><strong>Response:</strong> Status Code: 200, Body: { "message": "User registered successfully", "user": { user object } }</p>
+    </div>
+  </div>
+
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">3. POST /login</h5>
+      <p class="card-text">User login.</p>
+      <p class="card-text"><strong>Request:</strong> Method: POST, URL: /login</p>
+      <p class="card-text"><strong>Response:</strong> Status Code: 200, Body: { "message": "Login successful", "user": { user object } }</p>
+    </div>
+  </div>
+
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">4. POST /addfooddata</h5>
+      <p class="card-text">Upload a new food item with image.</p>
+      <p class="card-text"><strong>Request:</strong> Method: POST, URL: /addfooddata</p>
+      <p class="card-text"><strong>Response:</strong> Status Code: 201, Body: { "message": "Food item added successfully" }</p>
+    </div>
+  </div>
+
+  <div class="card mt-3">
+    <div class="card-body">
+      <h5 class="card-title">5. GET /getfooddata</h5>
+      <p class="card-text">Retrieve all food items.</p>
+      <p class="card-text"><strong>Request:</strong> Method: GET, URL: /getfooddata</p>
+      <p class="card-text"><strong>Response:</strong> Status Code: 200, Body: Array of food items.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
