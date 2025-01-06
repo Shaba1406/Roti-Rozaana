@@ -1,0 +1,42 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose= require('mongoose');
+require("dotenv").config();
+var cors = require('cors')
+
+const routes = require('./Routes/index')
+
+const app = express();
+
+app.use(cors())
+
+//handle cors
+// app.use((req,res,next)=>{
+//     res.setHeader('Access-Control-Allow-Origin', '*');
+//     res.setHeader('Access-Control-Allow-Methods', 'GET', 'POST', 'PUT', 'DELETE');
+//     res.setHeader('Acess-Control-Allow-Headers', 'Content-Type, Authorization');
+//     next();
+// })
+
+const PORT = 1111
+
+app.use(bodyParser.json());
+//routes
+app.use('/',routes);
+  
+//remember to change password and add databasename
+const URL =  process.env.MONGO_URL
+mongoose.connect("mongodb+srv://admin123samepassword:admin123@datasaltbusiness.pk26uu2.mongodb.net/?retryWrites=true&w=majority&appName=DatasaltBusiness",{
+    useNewUrlParser: true,
+    useUnifiedTopology:true
+}).then(success =>{
+    console.log("connected to mongodb successfully");
+    app.listen(PORT, ()=>{
+        console.log(`server running on port ${PORT}`);
+    });
+}).catch(err=>{
+    console.log(`error in database - ${err}`);
+})
+
+
+
