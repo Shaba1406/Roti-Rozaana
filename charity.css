@@ -1,0 +1,7 @@
+.map-container {
+    float: left;
+  }
+  .map {
+    width: 100%;
+    height: auto;
+  }
