@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url(Images/Solid-Black-Website-Background.jpg)no-repeat;
+            background-size: cover
+        }
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.814);
+        }
+        h2{
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .form-group textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .form-group input[type="checkbox"] {
+            margin-bottom: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .form-group label {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .form-group button[type="submit"] {
+            width: 100%;
+            padding: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .form-group button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 767px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Food Details</h2>
+        <form action="area.html">
+            <div class="form-group">
+                <label for="food_name">Food Name:</label>
+                <input type="text" id="food_name" name="food_name" required>
+            </div>
+            <div class="form-group">
+                <label for="veg_non_veg">Veg/Non Veg:</label><br><br>
+                <label for="veg">Veg</label>
+                <input type="checkbox" id="veg" name="veg" value="veg" style="margin-right: 5px;">
+                <label for="non_veg">Non Veg</label>
+                <input type="checkbox" id="non_veg" name="non_veg" value="non_veg">
+            </div>
+            <div class="form-group">
+                <label for="expiration_date">Expiration Date:</label>
+                <input type="date" id="expiration_date" name="expiration_date" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="Address"><b> Address</b></label>
+                <textarea id="Address" name="Address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="area"><b><area shape="" coords="" href="" alt=""></b></label>
+                <select id="area" name="area" required>
+                    <option value="">Select area</option>
+                    <option value="Navlakha">Navlakha</option>
+                    <option value="Palasiya">Palasiya</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="extra_detail">Extra Detail:</label>
+                <textarea id="extra_detail" name="extra_detail" rows="3" cols="30"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="picture">Upload Picture:</label>
+                <input type="file" id="picture" name="picture" accept="image/*">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">By checking this box, I confirm that the above information provided by me is true.</label>
+            </div>
+            <div class="form-group">
+            <a href="area.html">
+            <button type="submit">Submit</button>
+            </a>
+            </div>
+        </form>
+    </div>
+    <script>
+        const vegCheckbox = document.getElementById('veg');
+        const nonVegCheckbox = document.getElementById('non_veg');
+       
+        vegCheckbox.addEventListener('click', function() {
+        if (vegCheckbox.checked && nonVegCheckbox.checked) {
+        vegCheckbox.checked = false;
+        alert('You can only select one option: Veg or Non Veg.');
+        }
+        });
+        nonVegCheckbox.addEventListener('click', function() {
+        if (vegCheckbox.checked && nonVegCheckbox.checked) {
+        nonVegCheckbox.checked = false;
+        alert('You can only select one option: Veg or Non Veg.');
+        }
+       });
+    </script>
+</body>
+</html>

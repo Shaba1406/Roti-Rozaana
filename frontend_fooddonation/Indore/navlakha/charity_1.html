@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>charity-1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+      }
+      .left-side {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #eee;
+      }
+      .left-side h1 {
+        font-size: 2em;
+        margin-top: 0;
+      }
+      .left-side p {
+        margin-bottom: 0;
+      }
+      .map-container {
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+        margin-top: auto;
+      }
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      @media (min-width: 768px) {
+        .container {
+          flex-wrap: nowrap;
+        }
+        .left-side {
+          width: 50%;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+        .map-container {
+          width: 50%;
+          height: 100%;
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <h1>Jyoti Niwas (Missionaries of Charity)</h1>
+        <p>A-2, AB Rd, Radio Station, Indra Complex</p>
+        <p>, Navlakha, Indore, Madhya Pradesh 452001</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@example.com</p>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14722.890236743615!2d75.86610992574576!3d22.701369800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcdfb613866b%3A0xa4bfb95f6a7b01b8!2sJyoti%20Niwas%20(Missionaries%20of%20Charity)!5e0!3m2!1sen!2sin!4v1711641426910!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </body>
+</html>
